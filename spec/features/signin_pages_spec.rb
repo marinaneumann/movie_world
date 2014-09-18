@@ -10,4 +10,13 @@ describe 'thesignin process' do
       expect(page).to have_content 'Hi'
     end
 
+  it "will not sign in a user who uses the wrong password" do
+    user = User.create(:email => 'user@example.com', :password => 'password', :password_confirmation => 'password')
+    visit '/login'
+    fill_in 'Email', :with => 'user@example.com'
+    fill_in 'Password', :with => 'wrong'
+    click_button 'Log In'
+    expect(page). to have_content 'Log In'
+  end
+
 end
