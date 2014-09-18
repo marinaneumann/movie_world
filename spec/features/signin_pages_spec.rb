@@ -7,7 +7,7 @@ describe 'thesignin process' do
       fill_in 'Email', :with => 'user@example.com'
       fill_in 'Password', :with => 'password'
       click_button 'Log In'
-      expect(page).to have_content 'Hi'
+      expect(page).to have_content 'Movie World'
     end
 
   it "will not sign in a user who uses the wrong password" do
@@ -25,7 +25,7 @@ describe 'thesignin process' do
       fill_in 'Password', with: 'password'
       fill_in 'Password confirmation', with: 'password'
       click_button 'Sign Up'
-      expect(page).to have_content 'Hi'
+      expect(page).to have_content 'Movie World'
     end
 
     it "will not allow a user to sign up" do
@@ -45,7 +45,7 @@ describe 'thesignin process' do
       fill_in 'Password', with: 'testpassword'
       click_button 'Log In'
       click_link 'Log Out'
-      expect(page).to have_content 'Hi'
+      expect(page).to have_content 'Movie World'
     end
 
 end
