@@ -1,0 +1,23 @@
+<h1> New Movie</h1>
+
+<%= form_for @movie, :url => movies_path, :html => { :multipart => true } do |f| %>
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+     <%= f.label :genre %>
+    <%= f.text_field :genre %>
+
+     <%= f.label :cast %>
+    <%= f.text_field :cast %>
+
+     <%= f.label :release_date %>
+    <%= f.text_field :release_date %>
+
+    <%= f.file_field :image %>
+  </p>
+  <p><%= f.submit "Submit", :class => 'btn btn-warning' %></p>
+<% end %>
+
+
+<%= link_to "Home Page", movies_path, :class => 'btn btn-success' %>

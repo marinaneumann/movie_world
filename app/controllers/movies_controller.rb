@@ -5,11 +5,11 @@ class MoviesController < ApplicationController
 
   def new
     @movie = Movie.new
-    @user = User.find(session[:id])
+    @user = User.find(session[:user_id])
   end
 
   def create
-    @user = User.find(session[:id])
+    @user = User.find(session[:user_id])
     @movie = Movie.new(movie_params)
     if @movie.save
       flash[:notice]= "Movie has been added."
