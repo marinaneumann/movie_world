@@ -1,8 +1,10 @@
 <h1> Movie World </h1>
 
-<% if current_user != nil %>
-<p><%= link_to "Add Movie", new_movie_path, :class => 'btn btn-success' %></p>
-<% end %>
+	<p><%= link_to 'Movie Rankings', votes_path %></p>
+	<% if current_user != nil %>
+	<p><%= link_to "Add Movie", new_movie_path, :class => 'btn btn-success' %></p>
+	<% end %>
+
   <% @movies.each do |movie| %>
     <%= link_to image_tag(movie.image.url(:medium)), movie_path(movie) %>
   <% end %>

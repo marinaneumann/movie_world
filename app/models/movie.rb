@@ -5,4 +5,8 @@ class Movie < ActiveRecord::Base
   validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
   has_many :votes
   belongs_to :user
+
+	def vote_count
+		votes.count
+	end
 end

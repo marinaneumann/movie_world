@@ -1,28 +1,8 @@
-== README
+Movie World 
+By Marina Neumann
+Copyright 2014
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+This program will:
+	-Allow users to sign up and log in.
+	-Once logged in, allow the user to add movies or to vote for them on the movie rankings page.
+	-View Movie information by clicking on the image. 

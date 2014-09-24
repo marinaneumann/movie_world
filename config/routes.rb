@@ -6,5 +6,8 @@ Rails.application.routes.draw do
   root to: 'movies#index'
   resources :users
   resources :sessions
-  resources :movies
+  resources :movies do
+  	resources :votes
+  end
+  resources :votes
 end

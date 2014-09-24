@@ -1,0 +1,13 @@
+<h1>Movie Rankings</h1>
+<p><%= link_to "Home Page", movies_path %></p>
+
+<% if current_user != nil %>
+	<% @movies.sort_by(&:vote_count).reverse.each do |movie| %>
+	<p> Vote: <%= movie.votes.count %> <====<%= link_to image_tag(movie.image.url(:medium)), movie_path(movie) %></p>
+
+	<%= button_to 'Vote', movie_votes_path(movie) %>
+	<% end %>
+<% end %>
+
+
+
