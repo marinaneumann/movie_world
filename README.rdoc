@@ -5,4 +5,5 @@ Copyright 2014
 This program will:
 	-Allow users to sign up and log in.
 	-Once logged in, allow the user to add movies or to vote for them on the movie rankings page.
-	-View Movie information by clicking on the image. 
+	-Only users signed up can add to the site.However, users not signed up can still view information presented on movie's show page. 
+	-View movie information by clicking on the image. 

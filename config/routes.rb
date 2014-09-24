@@ -4,10 +4,11 @@ Rails.application.routes.draw do
   get 'logout', to: 'sessions#destroy', as: 'logout'
 
   root to: 'movies#index'
-  resources :users
-  resources :sessions
+  resources :users, :only => [ :index, :new, :create]
+  resources :sessions, :only => [:new, :create, :destroy, :show]
   resources :movies do
-  	resources :votes
+  	resources :votes, :only => [:index, :create]
   end
-  resources :votes
+  resources :movies, :only => [:index, :create, :new, :destroy, :show] 
+  resources :votes, :only => [:index, :create] 
 end
